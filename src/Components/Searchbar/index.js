@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function Searchbar() {
+
+    const [pokemon, setPokemon] = useState('');
+
+    function handlePokemon(e){
+        setPokemon(e.target.value)
+    }
+
     return (
         <div className='searchbar--container'>
             <div className='searchbar'>
-                <input placeholder='Busque por um Pokemon'/>
+                <input name='input-search' placeholder='Busque por um Pokemon' onChange={handlePokemon}/>
             </div>
         </div>
     )
