@@ -28,6 +28,13 @@ function Searchbar() {
             <div className='searchbar--button'>
                 <button onClick={handlerButton}>Procurar</button>
             </div>
+            {pokemon ? (
+                <div>
+                    <div>Nome: {pokemon.name}</div>
+                    <div>Peso: {pokemon.weight} LBS</div>
+                    <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+                </div>
+            ) : null}
         </div>
     )
 }
