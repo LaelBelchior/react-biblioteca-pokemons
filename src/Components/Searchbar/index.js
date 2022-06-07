@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './style.css';
 
-function Searchbar() {
+function Searchbar(props) {
 
+    const {onSearch} = props
     const [pokemon, setPokemon] = useState('');
 
     function handlerPokemon(e){
@@ -10,7 +11,7 @@ function Searchbar() {
     }
 
     function handlerButton(){
-        console.log(pokemon)
+        onSearch(pokemon)
     }
 
     return (

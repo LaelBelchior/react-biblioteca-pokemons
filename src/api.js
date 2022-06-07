@@ -1,8 +1,9 @@
-export const searchPokemon = (pokemon) => {
-    try {
-        const response = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-        return response.json()
-    } catch (error) {
-        console.log(error)
-    }
+export const searchPokemon = async (pokemon) => {
+  try {
+    let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+    const response = await fetch(url)
+    return await response.json()
+  } catch (error) {
+   console.log(error)   
+  }
 }
