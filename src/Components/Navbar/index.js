@@ -1,8 +1,9 @@
 import React from "react";
+import './style.css';
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="navbar">
       <img
       className="navbar--img"
       alt="Logo da Biblioteca"
