@@ -4,7 +4,6 @@ import CardListPokemon from '../CardListPokemons';
 
 function ListPokemons(props) {
   const { pokemons, fetch } = props;
-  console.log(pokemons)
 
   return (
     <div className="LP-container">
@@ -19,7 +18,7 @@ function ListPokemons(props) {
                     <div key={index}>
                         <CardListPokemon 
                         name={pokemon.name}
-                        image={pokemon.url}
+                        image={pokemon.sprites.front_default}
                         weight={pokemon.weight}
                         />
                     </div>)

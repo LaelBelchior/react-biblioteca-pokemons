@@ -5,9 +5,20 @@
     align-items: center;
 }
 
+.card-list_img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
 .card-list_texts{
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
 }
+
+.card-list_type{}
+
+.card-list_button{}

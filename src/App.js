@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Searchbar from './Components/Searchbar';
 import ListPokemons from './Components/ListPokemons';
-import { searchAllPokemon } from './api';
+import { searchAllPokemon, searchPokemonData } from './api';
 
 function App() {
 
@@ -15,9 +15,9 @@ function App() {
       setFetch(true)
       const data = await searchAllPokemon()
       const promises = data.results.map(async (pokemon) => {
-        return await getPokemonData(pokemon.url)
+        return await searchPokemonData(pokemon.url)
       })
-      const result = Promise.all(promises)
+      const result = await Promise.all(promises)
       setPokemons(result)
       setFetch(false)
     } catch (error) {
@@ -33,7 +33,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <ListPokemons pokemons={pokemons.results} fetch={fetch}/>
+      <ListPokemons pokemons={pokemons} fetch={fetch}/>
     </div>
   );
 }
