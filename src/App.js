@@ -12,16 +12,18 @@ function App() {
   const [pokemons, setPokemons] = useState([])
   const [fetch, setFetch] = useState(false)
 
+  const itensPerPage = 25
   const searchPokemons = async () => {
     try {
       setFetch(true)
-      const data = await searchAllPokemon()
+      const data = await searchAllPokemon(itensPerPage, itensPerPage * page)
       const promises = data.results.map(async (pokemon) => {
         return await searchPokemonData(pokemon.url)
       })
       const result = await Promise.all(promises)
       setPokemons(result)
       setFetch(false)
+      setTotalPages(Math.ceil(data.count/itensPerPage))
     } catch (error) {
       console.log(error)
     }
