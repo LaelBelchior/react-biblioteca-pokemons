@@ -2,14 +2,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-
-    padding: 10px;
     width: 25vw;
+
+    border: 2px solid black;
 }
 
-.card img{
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;   
+.card img{ 
     background-color: rgb(250, 220, 231);
 }
 
@@ -18,16 +16,45 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.card-texts h1{
+    padding-right: 15px;
+    padding-bottom: 5px;
 }
 
 .card-texts p{
     color: rgb(224, 99, 157);
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .card-descriptions{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#power{
+    margin: 0.5rem;
+    text-align: start;
+}
+
+#effect{
+    text-align: start;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+}
+
+#damage{
+    margin: 0.5rem;
+    text-align: start;
 }

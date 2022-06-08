@@ -31,13 +31,13 @@ function App() {
 
   useEffect(() => {
     searchPokemons()
-  }, [])
+  }, [page])
 
   return (
     <div>
       <Navbar />
       <Searchbar />
-      <ListPokemons pokemons={pokemons} fetch={fetch} page={page} totalPages={totalPages}/>
+      <ListPokemons pokemons={pokemons} fetch={fetch} page={page} totalPages={totalPages} setPage={setPage}/>
     </div>
   );
 }

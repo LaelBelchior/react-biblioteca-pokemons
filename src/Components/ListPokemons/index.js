@@ -4,15 +4,20 @@ import CardListPokemon from '../CardListPokemons';
 import Pagination from "../Pagination";
 
 function ListPokemons(props) {
-  const { pokemons, fetch, page, totalPages } = props;
+  const { pokemons, fetch, page, totalPages, setPage } = props;
 
   function onLeftClickHandler(){
-    console.log('Volta')
+    if(page > 0){
+      setPage(page - 1)
+    }
   }
 
   function onRighrClickHandler(){
-    console.log('Avança')
+    if(page !== totalPages){
+      setPage(page + 1)
+    }
   }
+  
 
   return (
     <div className="LP-container">
@@ -41,7 +46,7 @@ function ListPokemons(props) {
             </div>}    
       </div>
     </div>
-  );
+  )
 }
 
 export default ListPokemons;
