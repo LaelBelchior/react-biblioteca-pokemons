@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
-import {searchAllPokemon} from '../../api';
 
 function ListPokemons(){
-
-    const [pokemons, setPokemons] = useState([])
 
     return(
         <div className='LP-container'>
