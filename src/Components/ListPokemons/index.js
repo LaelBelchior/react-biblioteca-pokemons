@@ -4,6 +4,7 @@ import CardListPokemon from '../CardListPokemons';
 
 function ListPokemons(props) {
   const { pokemons, fetch } = props;
+  console.log(pokemons)
 
   return (
     <div className="LP-container">
@@ -13,10 +14,14 @@ function ListPokemons(props) {
       <div className="LP-body">
         {fetch ? null :
             <div>
-                {pokemons.map((pokemon, index) => {
+                {pokemons && pokemons.map((pokemon, index) => {
                     return(
-                    <div>
-                        <CardListPokemon />
+                    <div key={index}>
+                        <CardListPokemon 
+                        name={pokemon.name}
+                        image={pokemon.url}
+                        weight={pokemon.weight}
+                        />
                     </div>)
                 })}
             </div>}    

@@ -13,7 +13,11 @@ function App() {
   const searchPokemons = async () => {
     try {
       setFetch(true)
-      const result = await searchAllPokemon()
+      const data = await searchAllPokemon()
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url)
+      })
+      const result = Promise.all(promises)
       setPokemons(result)
       setFetch(false)
     } catch (error) {
@@ -29,7 +33,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <ListPokemons pokemons={pokemons} fetch={fetch}/>
+      <ListPokemons pokemons={pokemons.results} fetch={fetch}/>
     </div>
   );
 }
