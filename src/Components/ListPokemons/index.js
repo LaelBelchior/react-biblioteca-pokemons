@@ -1,14 +1,29 @@
 import React from "react";
 import "./style.css";
 import CardListPokemon from '../CardListPokemons';
+import Pagination from "../Pagination";
 
 function ListPokemons(props) {
-  const { pokemons, fetch } = props;
+  const { pokemons, fetch, page, totalPages } = props;
+
+  function onLeftClickHandler(){
+    console.log('Volta')
+  }
+
+  function onRighrClickHandler(){
+    console.log('Avança')
+  }
 
   return (
     <div className="LP-container">
       <div className="LP-header">
         <h1></h1>
+        <Pagination 
+        page={page+1}
+        totalPages={totalPages}
+        onLeftClick={onLeftClickHandler}
+        onRightClick={onRighrClickHandler}
+        />
       </div>
       <div className="LP-body">
         {fetch ? null :

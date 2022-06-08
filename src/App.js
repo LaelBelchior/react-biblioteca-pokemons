@@ -7,6 +7,8 @@ import { searchAllPokemon, searchPokemonData } from './api';
 
 function App() {
 
+  const[page, setPage] = useState(0)
+  const[totalPages, setTotalPages] = useState(0)
   const [pokemons, setPokemons] = useState([])
   const [fetch, setFetch] = useState(false)
 
@@ -33,7 +35,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <ListPokemons pokemons={pokemons} fetch={fetch}/>
+      <ListPokemons pokemons={pokemons} fetch={fetch} page={page} totalPages={totalPages}/>
     </div>
   );
 }
