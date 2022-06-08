@@ -1,0 +1,33 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 10px;
+    width: 25vw;
+}
+
+.card img{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;   
+    background-color: rgb(250, 220, 231);
+}
+
+.card-texts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-texts p{
+    color: rgb(224, 99, 157);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card-descriptions{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {searchPokemon} from '../../api';
+import Card from '../Card';
 import './style.css';
 
 function Searchbar() {
@@ -29,11 +30,15 @@ function Searchbar() {
                 <button onClick={handlerButton}>Procurar</button>
             </div>
             {pokemon ? (
-                <div>
-                    <div>Nome: {pokemon.name}</div>
-                    <div>Peso: {pokemon.weight} LBS</div>
-                    <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-                </div>
+                <Card 
+                img={pokemon.sprites.front_default}
+                name={pokemon.name}
+                weight={pokemon.weight}
+                powerOne='bbbb'
+                textOne='aaa'
+                powerTwo='cccc'
+                textTwo='dddd'
+                />
             ) : null}
         </div>
     )
