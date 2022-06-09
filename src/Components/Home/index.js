@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import Searchbar from "../Searchbar";
 import ListPokemons from "../ListPokemons/";
+import Initial from '../Initial/'
 import { searchAllPokemon, searchPokemonData } from "../../api";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
@@ -34,7 +35,7 @@ function Home() {
 
   return (
     <Router>
-      <div className="home-container">
+      <div className="home-container-buttons">
         <Link className="button-pag" to="/search">
           <p>Procurar Pokemon</p>
         </Link>
@@ -43,6 +44,7 @@ function Home() {
         </Link>
       </div>
       <Routes>
+        <Route exact path="/" element={<Initial />}/>
         <Route path="/search" element={<Searchbar />} />
         <Route
           path="/pagination"
