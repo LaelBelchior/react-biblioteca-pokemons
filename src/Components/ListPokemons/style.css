@@ -1,6 +1,7 @@
 .LP-container{
     display: flex;
     flex-direction: column;
+    background-color: rgb(167, 204, 240);
 }
 
 .LP-header{
@@ -9,6 +10,6 @@
 
 .LP-body{
     display: flex;
-    flex-flow: column;
-
+    flex-flow: row wrap;
+    justify-content: center;
 }

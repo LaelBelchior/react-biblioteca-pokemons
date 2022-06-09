@@ -11,11 +11,14 @@ function CardListPokemons(props){
                 <img alt={props.name} src={props.image}/>
             </div>
             <div className='card-list_texts'>
-                <h1>{props.name}</h1>
-                <p>{props.weight} lbs</p>
+                <div className='card-list_texts_inf'>
+                    <p>{props.weight} lbs</p>
+                    <p id='division'> | </p>
+                    <p id='type'>{props.type}</p>
+                </div>
+                <strong><p id='card-name'>{props.name}</p></strong>
             </div>
             <div className='card-list_type'>
-                <p id='type'>{props.type}</p>
                 <strong><p id='id'>#{props.id}</p></strong>
                 <button className='card-list_button'>{fav}</button>
             </div>
