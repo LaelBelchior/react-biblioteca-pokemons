@@ -4,15 +4,11 @@
     justify-content: space-around;
     align-items: center;
 
-    background-color: aliceblue;
-    border: 0.1rem black solid;
-    width: 20vw;
+    border-bottom: 0.1rem black solid;
     margin: 1rem;
 }
 
 .card-list_img{
-    width: 5rem;
-    height: 5rem;
     padding: 0.5rem;
 }
 
@@ -21,11 +17,10 @@
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    width: 10vw;
 }
 
 .card-list_texts h1{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .card-list_type{
@@ -44,4 +39,13 @@
 
 #id{
     font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width:310px) {
+    .card-list{
+        display: flex;
+        flex-flow: column;
+    }
+    
 }
