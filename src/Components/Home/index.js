@@ -36,10 +36,10 @@ function Home() {
     <Router>
       <div className="home-container">
         <Link className="button-pag" to="/search">
-          Procurar por um Pokemon
+          <p>Procurar Pokemon</p>
         </Link>
         <Link className="button-pag" to="/pagination">
-          Listar todos os Pokemons
+          <p>Listar Pokemons</p>
         </Link>
       </div>
       <Routes>
