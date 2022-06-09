@@ -3,13 +3,17 @@
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
+
+    background-color: aliceblue;
+    border: 0.1rem black solid;
+    width: 20vw;
+    margin: 1rem;
 }
 
 .card-list_img{
-    width: 70px;
-    height: 70px;
-    margin-right: 10px;
-    padding: 10px;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.5rem;
 }
 
 .card-list_texts{
@@ -17,8 +21,30 @@
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
+    width: 10vw;
 }
 
-.card-list_type{}
+.card-list_texts h1{
+    font-size: 1rem;
+}
 
-.card-list_button{}
+.card-list_texts p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-list_type{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem;
+}
+
+#type{
+    text-transform: uppercase;
+}
+
+#id{
+    font-size: 1rem;
+}

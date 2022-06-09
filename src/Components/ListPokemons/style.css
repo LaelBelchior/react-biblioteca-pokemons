@@ -1,11 +1,14 @@
 .LP-container{
-
+    display: flex;
+    flex-direction: column;
 }
 
 .LP-header{
-
+    align-self: flex-end;
 }
 
 .LP-body{
-    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
 }

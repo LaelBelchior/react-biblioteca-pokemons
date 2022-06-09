@@ -30,9 +30,9 @@ function ListPokemons(props) {
         onRightClick={onRighrClickHandler}
         />
       </div>
-      <div className="LP-body">
+      <div className="LP-body-container">
         {fetch ? null :
-            <div>
+            <div className="LP-body">
                 {pokemons && pokemons.map((pokemon, index) => {
                     return(
                     <div key={index}>
@@ -40,6 +40,8 @@ function ListPokemons(props) {
                         name={pokemon.name}
                         image={pokemon.sprites.front_default}
                         weight={pokemon.weight}
+                        type={pokemon.types[0].type.name}
+                        id={pokemon.id}
                         />
                     </div>)
                 })}

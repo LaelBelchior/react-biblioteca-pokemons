@@ -1,0 +1,10 @@
+.pagination-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.pagination-text{
+    margin: 0rem 1rem;
+}

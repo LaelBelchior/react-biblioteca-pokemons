@@ -10,9 +10,9 @@ function Card(props) {
         <p>{props.weight}lbs</p>
       </div>
       <div className="card-descriptions">
-        <p id="power">POWER: {props.power}</p>
-        <p id="effect">EFFECT: {props.effect}</p>
-        <p id="damage">DAMAGE: {props.damage}</p>
+        <p id="power"><strong>Power:</strong> {props.power}</p>
+        <p id="effect"><strong>Effect:</strong> {props.effect}</p>
+        <p id="damage"><strong>Damage:</strong> {props.damage}</p>
       </div>
     </div>
   );

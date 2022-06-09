@@ -15,9 +15,10 @@ function CardListPokemons(props){
                 <p>{props.weight}</p>
             </div>
             <div className='card-list_type'>
-                {props.type}
+                <p id='type'>{props.type}</p>
+                <strong><p id='id'>#{props.id}</p></strong>
+                <button className='card-list_button'>{fav}</button>
             </div>
-            <button className='card-list_button'>{fav}</button>
         </div>
     )
 }
