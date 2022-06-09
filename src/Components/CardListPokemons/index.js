@@ -12,7 +12,7 @@ function CardListPokemons(props){
             </div>
             <div className='card-list_texts'>
                 <h1>{props.name}</h1>
-                <p>{props.weight}</p>
+                <p>{props.weight} lbs</p>
             </div>
             <div className='card-list_type'>
                 <p id='type'>{props.type}</p>

@@ -28,11 +28,6 @@
     font-size: 1rem;
 }
 
-.card-list_texts p{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
 .card-list_type{
     display: flex;
     flex-direction: column;
@@ -43,6 +38,8 @@
 
 #type{
     text-transform: uppercase;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 #id{
