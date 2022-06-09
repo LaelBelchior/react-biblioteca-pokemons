@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { searchPokemon, searchPowerPokemon } from "../../api";
+import { searchPokemon, searchPowerPokemon, searchImagePokemon } from "../../api";
 import Card from "../Card";
 import "./style.css";
 
@@ -9,6 +9,7 @@ function Searchbar() {
   const [power, setPower] = useState("");
   const [damage, setDamage] = useState("");
   const [effect, setEffect] = useState("");
+  const [image, setImage] = useState("");
 
   function handlerSearch(e) {
     setSearch(e.target.value);
@@ -21,8 +22,14 @@ function Searchbar() {
   const onSearchHandler = async (pokemon) => {
     const result = await searchPokemon(pokemon);
     capturePower(result.id);
+    captureImage(result.id)
     setPokemon(result);
   };
+
+  const captureImage = async (pokemon) => {
+    const result = await searchImagePokemon(pokemon)
+    setImage(result)
+  }
 
   const capturePower = async (pokemon) => {
     const result = await searchPowerPokemon(pokemon);
@@ -53,7 +60,7 @@ function Searchbar() {
       <div className="searchbar-card">
         {pokemon ? (
           <Card
-            img={pokemon.sprites.front_default}
+            img={image}
             name={pokemon.name}
             weight={pokemon.weight}
             power={power}

@@ -36,3 +36,15 @@ export const searchPowerPokemon = async (id) => {
     console.log(error)
   }
 }
+
+export const searchImagePokemon = async (id) => {
+    let url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
+    const response = await fetch(url)
+    return response.blob()
+      .then(result => {
+        const imgURL = URL.createObjectURL(result)
+        return imgURL
+      })
+}
+
+
