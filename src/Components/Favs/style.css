@@ -1,0 +1,22 @@
+.favs-empty{
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.favs-pokemon-container{
+    background-color: rgb(167, 204, 240);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.favs-pokemon{
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.button-delete{
+    width: 5vw;
+}

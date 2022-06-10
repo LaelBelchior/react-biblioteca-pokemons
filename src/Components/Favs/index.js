@@ -16,14 +16,14 @@ function Favs() {
     <div className="favs-container">
       <div>
         {favs.length == 0 ? (
-          <div>
+          <div className="favs-empty">
             <h1>Sem favoritos até agora</h1>
           </div>
         ) : (
-          <div>
+          <div className="favs-pokemon-container">
             {favs.map((pokemon, index) => {
               return (
-                <div key={index}>
+                <div  className="favs-pokemon" key={index}>
                   <CardListPokemons
                     name={pokemon.name}
                     image={pokemon.sprites.front_default}
