@@ -13,3 +13,11 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+
+@media screen and (max-width: 700px) {
+    .LP-body{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
