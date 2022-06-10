@@ -1,10 +1,16 @@
 import React from "react";
 import "./style.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CardListPokemons from "../CardListPokemons";
+import { removePokemon } from '../../Store/pokemons/'
 
 function Favs() {
   const favs = useSelector((state) => state.pokemon);
+  const dispatch = useDispatch()
+
+  function removePokemonId(id){
+    dispatch(removePokemon(id))
+  }
 
   return (
     <div className="favs-container">
@@ -25,6 +31,7 @@ function Favs() {
                     type={pokemon.types[0].type.name}
                     id={pokemon.id}
                   />
+                  <button className="button-delete" onClick={() => removePokemonId(pokemon.id)}>🗑️</button>
                 </div>
               );
             })}
