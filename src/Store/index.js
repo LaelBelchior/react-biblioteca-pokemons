@@ -1,7 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import pokemonReducer from '../Store/pokemons/'
 
-function reducer(state = [], action) {
-    return state
-}
+const rootReducer = combineReducers({
+    pokemons: pokemonReducer,
+})
 
-export default configureStore(reducer)
+export default configureStore(rootReducer)

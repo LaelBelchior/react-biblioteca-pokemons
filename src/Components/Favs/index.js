@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 function Favs(){
 
-    const favs = useSelector((state) => state)
+    const favs = useSelector((state) => state.pokemons)
 
     return(
         <div>
