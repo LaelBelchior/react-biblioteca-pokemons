@@ -2,9 +2,12 @@ import React from "react";
 import "./style.css";
 import CardListPokemon from '../CardListPokemons';
 import Pagination from "../Pagination";
+import { useDispatch } from "react-redux";
+import {addPokemon} from '../../Store/pokemons/'
 
 function ListPokemons(props) {
   const { pokemons, fetch, page, totalPages, setPage } = props;
+  const dispatch = useDispatch()
 
   function onLeftClickHandler(){
     if(page > 0){
@@ -16,6 +19,10 @@ function ListPokemons(props) {
     if(page !== totalPages){
       setPage(page + 1)
     }
+  }
+
+  function addPokemonFav(pokemon){
+    dispatch(addPokemon(pokemon))
   }
   
   return (
@@ -41,6 +48,8 @@ function ListPokemons(props) {
                         weight={pokemon.weight}
                         type={pokemon.types[0].type.name}
                         id={pokemon.id}
+                        pokemon={pokemon}
+                        addPokemonFav={addPokemonFav}
                         />
                     </div>)
                 })}

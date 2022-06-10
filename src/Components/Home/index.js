@@ -6,12 +6,14 @@ import Initial from '../Initial/'
 import Favs from '../Favs/'
 import { searchAllPokemon, searchPokemonData } from "../../api";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { useSelector } from 'react-redux'
 
 function Home() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [pokemons, setPokemons] = useState([]);
   const [fetch, setFetch] = useState(false);
+  const length = useSelector(state => state.pokemon.length)
 
   const itensPerPage = 25;
   const searchPokemons = async () => {
@@ -45,6 +47,7 @@ function Home() {
         </Link>
         <Link className="button-pag" to="/favs">
           <p>Pokemons Favoritos</p>
+          <span>{length}</span>
         </Link>
       </div>
       <Routes>
