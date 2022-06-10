@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import CardListPokemon from '../CardListPokemons';
+import CardListPokemons from '../CardListPokemons';
 import Pagination from "../Pagination";
 import { useDispatch } from "react-redux";
 import {addPokemon} from '../../Store/pokemons/'
@@ -42,7 +42,7 @@ function ListPokemons(props) {
                 {pokemons && pokemons.map((pokemon, index) => {
                     return(
                     <div key={index}>
-                        <CardListPokemon 
+                        <CardListPokemons 
                         name={pokemon.name}
                         image={pokemon.sprites.front_default}
                         weight={pokemon.weight}
