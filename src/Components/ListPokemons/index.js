@@ -18,7 +18,6 @@ function ListPokemons(props) {
     }
   }
   
-
   return (
     <div className="LP-container">
       <div className="LP-header">

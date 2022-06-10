@@ -3,6 +3,7 @@ import "./style.css";
 import Searchbar from "../Searchbar";
 import ListPokemons from "../ListPokemons/";
 import Initial from '../Initial/'
+import Favs from '../Favs/'
 import { searchAllPokemon, searchPokemonData } from "../../api";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
@@ -42,10 +43,14 @@ function Home() {
         <Link className="button-pag" to="/pagination">
           <p>Listar Pokemons</p>
         </Link>
+        <Link className="button-pag" to="/favs">
+          <p>Pokemons Favoritos</p>
+        </Link>
       </div>
       <Routes>
         <Route exact path="/" element={<Initial />}/>
         <Route path="/search" element={<Searchbar />} />
+        <Route path='/favs' element={<Favs />}/>
         <Route
           path="/pagination"
           element={
