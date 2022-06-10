@@ -2,11 +2,12 @@ import React from "react";
 import "./style.css";
 import CardListPokemons from '../CardListPokemons';
 import Pagination from "../Pagination";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {addPokemon} from '../../Store/pokemons/'
 
 function ListPokemons(props) {
   const { pokemons, fetch, page, totalPages, setPage } = props;
+  const favs = useSelector((state) => state.pokemon);
   const dispatch = useDispatch()
 
   function onLeftClickHandler(){
@@ -22,7 +23,11 @@ function ListPokemons(props) {
   }
 
   function addPokemonFav(pokemon){
-    dispatch(addPokemon(pokemon))
+    const updateFavorites = [...favs]
+    const favoriteIndex = updateFavorites.indexOf(pokemon)
+    if(favoriteIndex < 0){
+      dispatch(addPokemon(pokemon))
+    }
   }
   
   return (
