@@ -12,7 +12,9 @@ function Searchbar() {
   const [image, setImage] = useState("");
 
   function handlerSearch(e) {
-    setSearch(e.target.value);
+    const result = e.target.value
+    const searchRight = result.toLowerCase()
+    setSearch(searchRight);
   }
 
   const handlerButton = async () => {
