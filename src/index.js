@@ -18,3 +18,6 @@ root.render(
   </Provider>
 );
 
+
+NODE_OPTIONS="--max-old-space-size=4096"
+
