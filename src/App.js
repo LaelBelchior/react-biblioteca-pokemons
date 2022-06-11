@@ -7,7 +7,7 @@ import '@aws-amplify/ui-react/styles.css'
 
 function App() {
   return (
-    <Authenticator>
+    <Authenticator className='authenticator'>
       {({signOut, user}) => (
         <div className='authenticator-container'>
           <Home />

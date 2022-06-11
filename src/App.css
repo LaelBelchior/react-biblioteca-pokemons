@@ -1,7 +1,32 @@
-*{
+* {
   margin: 0px;
 }
 
 .App {
   text-align: center;
+}
+
+.authenticator {
+  margin-top: 10rem;
+}
+
+.authenticator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.authenticator-button {
+  text-align: center;
+  width: 10rem;
+  text-decoration: none;
+  background-color: #0e6f9f;
+  border: none;
+  border-radius: 10px;
+  height: 44px;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
 }
