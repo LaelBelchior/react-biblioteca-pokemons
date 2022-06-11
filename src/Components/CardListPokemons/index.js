@@ -1,9 +1,13 @@
 import React from 'react';
+import { useSelector } from "react-redux"
 import './style.css';
 
 function CardListPokemons({name, image, weight, type, id, pokemon, addPokemonFav}){
 
-    const fav =  "♥"
+    const favs = useSelector((state) => state.pokemon);
+    const arrayPokemons = [...favs]
+    const fav = arrayPokemons.includes(pokemon)? "❤️" : "🖤"
+
 
     return(
         <div className='card-list'>
